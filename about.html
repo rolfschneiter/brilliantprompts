@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — BrilliantPrompts</title>
+    <meta name="description" content="Learn about BrilliantPrompts — a curated library of expert-crafted AI prompts for professionals.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-free">
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-logo">✨ Brilliant<span>Prompts</span></a>
+            <div class="nav-menu">
+                <a href="/prompts/">Prompts</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about.html" class="active">About</a>
+                <a href="/faq.html">FAQ</a>
+                <a href="/activate.html" class="nav-login free-only">Activate Key</a>
+                <a href="#" class="nav-portal pro-only" id="portal-link">My Account</a>
+                <a href="#" class="nav-logout pro-only" onclick="Auth.logout(); return false;">Logout</a>
+            </div>
+            <div class="nav-actions">
+                <a href="/activate.html" class="btn btn-secondary btn-sm nav-login free-only">Activate</a>
+                <a href="/#pricing" class="btn btn-primary btn-sm btn-subscribe free-only">Subscribe</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        <div class="container" style="max-width: 720px; padding: 3rem 1.5rem 5rem;">
+            <h1>About <span class="text-gradient">BrilliantPrompts</span></h1>
+            <p style="font-size: 1.1rem; margin-top: 1rem;">
+                We believe the biggest gap in AI isn't the models — it's the prompts.
+            </p>
+
+            <h2 style="margin-top: 2.5rem;">The Problem</h2>
+            <p>
+                AI models like ChatGPT, Claude, and Gemini are incredibly powerful. But most people use them with vague, unstructured prompts and get mediocre results. The difference between a good and great output often comes down to how you ask.
+            </p>
+
+            <h2 style="margin-top: 2rem;">Our Solution</h2>
+            <p>
+                BrilliantPrompts is a curated library of 200+ expert-crafted prompts, each designed using proven prompt engineering techniques: role assignment, chain-of-thought reasoning, structured outputs, and few-shot examples.
+            </p>
+            <p>
+                Every prompt is tested across multiple AI models, includes practical usage guides, example outputs, and pro tips — so you get the best results, every time.
+            </p>
+
+            <h2 style="margin-top: 2rem;">What Sets Us Apart</h2>
+            <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li style="color: var(--color-text-muted); padding: 0.3rem 0; list-style: disc;"><strong style="color: var(--color-heading);">Tested & Verified</strong> — Every prompt is tested on GPT-4, Claude, and Gemini</li>
+                <li style="color: var(--color-text-muted); padding: 0.3rem 0; list-style: disc;"><strong style="color: var(--color-heading);">Structured Format</strong> — Usage guide, example output, and pro tips with every prompt</li>
+                <li style="color: var(--color-text-muted); padding: 0.3rem 0; list-style: disc;"><strong style="color: var(--color-heading);">Updated Weekly</strong> — 10-15 new prompts every week across all categories</li>
+                <li style="color: var(--color-text-muted); padding: 0.3rem 0; list-style: disc;"><strong style="color: var(--color-heading);">8 Categories</strong> — From coding to creative writing, business to image generation</li>
+                <li style="color: var(--color-text-muted); padding: 0.3rem 0; list-style: disc;"><strong style="color: var(--color-heading);">One-Click Copy</strong> — Copy any prompt instantly to use in your favorite AI tool</li>
+            </ul>
+
+            <h2 style="margin-top: 2rem;">Built for Professionals</h2>
+            <p>
+                Whether you're a developer, marketer, writer, educator, or business leader — our prompts help you get more done in less time. Stop spending minutes crafting the perfect prompt. Start with one that already works.
+            </p>
+
+            <div style="margin-top: 2.5rem; text-align: center;">
+                <a href="/prompts/" class="btn btn-primary btn-lg">Browse Free Prompts</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">✨ Brilliant<span>Prompts</span></div>
+                    <p>Expert-crafted AI prompts for professionals.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Prompts</h4>
+                    <a href="/prompts/coding.html">Coding & Dev</a>
+                    <a href="/prompts/business.html">Business</a>
+                    <a href="/prompts/marketing.html">Marketing</a>
+                    <a href="/prompts/writing.html">Writing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>More</h4>
+                    <a href="/prompts/productivity.html">Productivity</a>
+                    <a href="/prompts/data.html">Data & Research</a>
+                    <a href="/prompts/education.html">Education</a>
+                    <a href="/prompts/image-gen.html">Image Gen</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about.html">About</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/privacy.html">Privacy</a>
+                    <a href="/terms.html">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BrilliantPrompts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const portalLink = document.getElementById('portal-link');
+            if (portalLink) portalLink.href = CONFIG.CUSTOMER_PORTAL_URL;
+        });
+    </script>
+</body>
+</html>
