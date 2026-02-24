@@ -20,8 +20,8 @@ const CONFIG = {
     // Checkout URLs
     // Findest du unter Products > [Produkt] > Share
     // ----------------------------------------------------------
-    CHECKOUT_URL_MONTHLY: 'https://rsxch.lemonsqueezy.com/checkout/buy/20378234-508c-41f3-8df3-73b18474ae74',
-    CHECKOUT_URL_ANNUAL: 'https://rsxch.lemonsqueezy.com/checkout/buy/3d1dcf95-e00a-4b9b-ae04-3ee9f9517c4a',
+    CHECKOUT_URL_MONTHLY: 'https://rsxch.lemonsqueezy.com/checkout/buy/3d1dcf95-e00a-4b9b-ae04-3ee9f9517c4a',
+    CHECKOUT_URL_ANNUAL: 'https://rsxch.lemonsqueezy.com/checkout/buy/20378234-508c-41f3-8df3-73b18474ae74',
 
     // ----------------------------------------------------------
     // Customer Portal URL
