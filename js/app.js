@@ -200,7 +200,10 @@ const App = (() => {
 
     // ---- Render Prompt Cards ----
     function renderPromptCard(prompt, isPremium) {
-        const isLocked = isPremium && !Auth.isAuthenticated();
+        const isAuthenticated = (typeof Auth !== 'undefined') ? Auth.isAuthenticated() : false;
+        const isLocked = isPremium && !isAuthenticated;
+        const checkoutUrl = (typeof CONFIG !== 'undefined') ? CONFIG.CHECKOUT_URL_MONTHLY : '#';
+        const price = (typeof CONFIG !== 'undefined') ? CONFIG.PRICE_MONTHLY : 7;
 
         const modelBadges = (prompt.models || [])
             .map(m => `<span class="badge badge-model">${m}</span>`)
@@ -235,7 +238,7 @@ const App = (() => {
                 <div class="prompt-locked-overlay">
                     <div class="lock-icon">🔒</div>
                     <p>Subscribe to unlock 168+ premium prompts</p>
-                    <a href="${CONFIG.CHECKOUT_URL_MONTHLY}" class="btn btn-primary btn-sm lemonsqueezy-button">Subscribe — $${CONFIG.PRICE_MONTHLY}/mo</a>
+                    <a href="${checkoutUrl}" class="btn btn-primary btn-sm lemonsqueezy-button">Subscribe — $${price}/mo</a>
                 </div>
             ` : `
                 <div class="prompt-text-wrapper">
@@ -276,11 +279,18 @@ const App = (() => {
         const premiumPrompts = (typeof PREMIUM_PROMPTS !== 'undefined' ? PREMIUM_PROMPTS : [])
             .filter(p => p.category === category);
 
-        let html = '';
-        freePrompts.forEach(p => { html += renderPromptCard(p, false); });
-        premiumPrompts.forEach(p => { html += renderPromptCard(p, true); });
+        // Always render free prompts first so they're visible even if premium fails
+        let freeHtml = '';
+        freePrompts.forEach(p => { freeHtml += renderPromptCard(p, false); });
+        container.innerHTML = freeHtml;
 
-        container.innerHTML = html;
+        try {
+            let premiumHtml = '';
+            premiumPrompts.forEach(p => { premiumHtml += renderPromptCard(p, true); });
+            container.innerHTML += premiumHtml;
+        } catch (e) {
+            console.warn('Premium prompts could not be rendered:', e);
+        }
 
         // Update count
         const countDisplay = document.getElementById('prompt-count');
@@ -298,11 +308,18 @@ const App = (() => {
         const freePrompts = typeof FREE_PROMPTS !== 'undefined' ? FREE_PROMPTS : [];
         const premiumPrompts = typeof PREMIUM_PROMPTS !== 'undefined' ? PREMIUM_PROMPTS : [];
 
-        let html = '';
-        freePrompts.forEach(p => { html += renderPromptCard(p, false); });
-        premiumPrompts.forEach(p => { html += renderPromptCard(p, true); });
+        // Always render free prompts first so they're visible even if premium fails
+        let freeHtml = '';
+        freePrompts.forEach(p => { freeHtml += renderPromptCard(p, false); });
+        container.innerHTML = freeHtml;
 
-        container.innerHTML = html;
+        try {
+            let premiumHtml = '';
+            premiumPrompts.forEach(p => { premiumHtml += renderPromptCard(p, true); });
+            container.innerHTML += premiumHtml;
+        } catch (e) {
+            console.warn('Premium prompts could not be rendered:', e);
+        }
 
         const countDisplay = document.getElementById('prompt-count');
         if (countDisplay) {

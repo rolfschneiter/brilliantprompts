@@ -921,11 +921,11 @@ For each step:
 
 ### Decision Points
 For any step with conditional logic:
-```
+\`\`\`
 IF [condition A] → Go to Step X
 IF [condition B] → Go to Step Y
 IF [unclear / edge case] → Escalate to [person/team]
-```
+\`\`\`
 
 ### Exception Handling
 | Scenario | What to Do | Who to Contact |
@@ -1047,9 +1047,9 @@ Sensitive topics: [any topics that might reduce response rates if asked poorly]
 
 ### Survey Flow
 Map the question order and any skip logic:
-```
+\`\`\`
 Q1 → Q2 → IF Q2 = "Yes" → Q3a ELSE → Q3b → Q4 → ...
-```
+\`\`\`
 
 ### Pilot Testing Recommendations
 - Suggest 3 cognitive interview questions to test with 5 respondents before launch

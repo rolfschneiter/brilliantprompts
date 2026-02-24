@@ -548,8 +548,14 @@ section:nth-child(even) {
 }
 
 /* ============================================================
-   9. Prompt Cards
+   9. Prompts Grid & Cards
    ============================================================ */
+.prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-6);
+}
+
 .prompt-card {
   background: var(--color-bg-raised);
   border: 1px solid var(--color-border);
